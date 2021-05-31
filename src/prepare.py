@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pandas as pd
 
-FOLDERS_TO_LABELS = {"n03445777": "golf ball", "n03888257": "parachute"}
+FOLDERS_TO_LABELS = {"n02099601": "golden", "n02111889": "samoyed"}
 
 
 def get_files_and_labels(source_path):
@@ -15,6 +15,8 @@ def get_files_and_labels(source_path):
             images.append(filename)
             label = FOLDERS_TO_LABELS[folder]
             labels.append(label)
+    print(images)
+    print(labels)
     return images, labels
 
 
